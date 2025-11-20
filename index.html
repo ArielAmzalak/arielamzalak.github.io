@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galho Forte - Manaus mais verde</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --green-light: #83BB6D;
+      --green-main: #5EA94D;
+      --green-strong: #44A952;
+      --green-dark: #4A9769;
+      --bg-dark: #2B3635;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--white);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top left, var(--green-light), var(--green-strong));
+    }
+
+    .hero-card {
+      max-width: 900px;
+      background: rgba(43, 54, 53, 0.85);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6px);
+    }
+
+    .logo-mark {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-main), var(--green-strong));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 32px;
+    }
+
+    .logo-mark span {
+      border-left: 3px solid var(--white);
+      padding-left: 10px;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .hero-header {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .hero-title h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+
+    .hero-title p {
+      font-size: 15px;
+      color: #d6f5dd;
+      max-width: 500px;
+    }
+
+    .hero-body p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 14px;
+      color: #e7f9eb;
+    }
+
+    .hero-body strong {
+      color: var(--green-light);
+    }
+
+    .hero-actions {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--green-main), var(--green-strong));
+      color: var(--white);
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.35);
+      background: transparent;
+      color: var(--white);
+      font-size: 15px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .badges {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(132, 187, 109, 0.15);
+      border: 1px solid rgba(132, 187, 109, 0.35);
+      color: #dcfce7;
+    }
+
+    @media (max-width: 600px) {
+      .hero-card {
+        padding: 24px 20px;
+      }
+      .hero-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .logo-mark {
+        width: 68px;
+        height: 68px;
+      }
+      .hero-title h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-header">
+        <div class="logo-mark">
+          <div style="display:flex;align-items:center;gap:6px;">
+            <span style="border:none;padding:0;font-size:32px;">A</span>
+            <span>GALHO<br>FORTE</span>
+          </div>
+        </div>
+        <div class="hero-title">
+          <h1>Galho Forte<br>fazendo Manaus florescer 🌿</h1>
+          <p>
+            Um movimento que começou com a doação de mudas e hoje leva
+            cuidado, saúde e mais verde para milhares de famílias em Manaus.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-body">
+        <p>
+          O <strong>Galho Forte</strong> nasceu com um propósito simples:
+          plantar árvores e transformar o paisagismo de Manaus, uma das capitais
+          menos arborizadas do Brasil. A cada ação, o projeto cresceu, levou
+          atendimento médico, vacinação, cuidado com os pets e muito carinho
+          para quem mais precisa.
+        </p>
+        <p>
+          Já são milhares de mudas plantadas e milhares de pessoas atendidas
+          em ações sociais que unem voluntários, famílias e parceiros em torno
+          de um único objetivo: <strong>cuidar das pessoas e da cidade</strong>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#participe" class="btn-primary">Quero participar</a>
+          <a href="#sobre" class="btn-secondary">Saiba mais sobre o projeto</a>
+        </div>
+
+        <div class="badges">
+          <div class="badge">Cidades mais verdes</div>
+          <div class="badge">Ações sociais gratuitas</div>
+          <div class="badge">Mudas de espécies nativas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
