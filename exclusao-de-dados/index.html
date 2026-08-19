@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exclusão de dados — AMSN</title>
+  <meta name="description" content="Como pedir a exclusão dos seus dados pessoais à AMSN: pelo WhatsApp (responda EXCLUIR) ou por e-mail. Prazo de até 15 dias, conforme a LGPD." />
+  <link rel="canonical" href="https://amsn.online/exclusao-de-dados/" />
+  <style>
+    :root {
+      --bg: #F4F6F8;
+      --card: #FFFFFF;
+      --ink: #1B2430;
+      --muted: #5A6672;
+      --accent: #1F4E79;
+      --accent-soft: #EAF1F8;
+      --line: #E3E8EE;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+    a { color: var(--accent); }
+    .topbar {
+      max-width: 880px; margin: 0 auto; padding: 22px 20px 0;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: baseline; gap: 10px; text-decoration: none; color: var(--ink); }
+    .wordmark { font-weight: 800; font-size: 24px; letter-spacing: 0.18em; color: var(--accent); }
+    .brand small { font-size: 13px; color: var(--muted); }
+    .back {
+      color: var(--accent); text-decoration: none; font-size: 14px;
+      padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); white-space: nowrap;
+    }
+    .back:hover { background: var(--accent-soft); }
+    main { max-width: 880px; margin: 20px auto 48px; padding: 0 20px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 36px 32px; box-shadow: 0 8px 30px rgba(27, 36, 48, 0.06); }
+    .eyebrow { display: inline-block; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 8px; }
+    h1 { font-size: 32px; line-height: 1.2; margin-bottom: 8px; }
+    .updated { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+    .lead { font-size: 17px; line-height: 1.65; margin-bottom: 20px; }
+    nav.toc { background: var(--accent-soft); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 8px 0 28px; }
+    nav.toc strong { display: block; margin-bottom: 8px; font-size: 13px; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; }
+    nav.toc ol { padding-left: 20px; columns: 2; column-gap: 24px; font-size: 15px; line-height: 1.7; }
+    nav.toc a { text-decoration: none; }
+    nav.toc a:hover { text-decoration: underline; }
+    section { margin-bottom: 28px; scroll-margin-top: 20px; }
+    h2 { font-size: 21px; line-height: 1.3; margin-bottom: 10px; border-top: 1px solid var(--line); padding-top: 18px; }
+    p, li { font-size: 16px; line-height: 1.65; }
+    p { margin-bottom: 12px; }
+    ul, ol { margin: 0 0 12px 22px; }
+    li { margin-bottom: 6px; }
+    .steps { counter-reset: step; list-style: none; margin-left: 0; }
+    .steps > li {
+      position: relative; padding: 14px 16px 14px 58px; margin-bottom: 12px;
+      background: var(--accent-soft); border: 1px solid var(--line); border-radius: 12px;
+    }
+    .steps > li::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 14px; top: 12px; width: 32px; height: 32px; border-radius: 50%;
+      background: var(--accent); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;
+    }
+    .steps > li strong.title { display: block; font-size: 17px; margin-bottom: 4px; }
+    .note { background: var(--accent-soft); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 12px 16px; margin: 12px 0 16px; font-size: 15px; }
+    .kbd { display: inline-block; font-weight: 700; background: #F0F3F6; border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; font-size: 14px; }
+    .kbd.big { font-size: 18px; padding: 2px 10px; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 15px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 10px; border-bottom: 1px solid var(--line); line-height: 1.5; }
+    th { background: var(--accent-soft); font-weight: 700; }
+    .table-wrap { overflow-x: auto; }
+    footer.legal-footer {
+      margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px;
+      display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: space-between;
+    }
+    footer.legal-footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+    footer.legal-footer a { text-decoration: none; font-weight: 600; }
+    footer.legal-footer a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .card { padding: 26px 18px; border-radius: 12px; }
+      h1 { font-size: 26px; }
+      nav.toc ol { columns: 1; }
+      p, li { font-size: 15.5px; }
+      .steps > li { padding-left: 54px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .topbar, footer.legal-footer nav { display: none; }
+      .card { box-shadow: none; border: none; padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a class="brand" href="https://amsn.online/" aria-label="AMSN">
+      <span class="wordmark">AMSN</span>
+      <small>amsn.online</small>
+    </a>
+    <a class="back" href="https://amsn.online/">← amsn.online</a>
+  </div>
+
+  <main>
+    <article class="card">
+      <span class="eyebrow">Instruções ao titular de dados</span>
+      <h1>Exclusão de dados pessoais</h1>
+      <p class="updated">Última atualização: 19 de agosto de 2026</p>
+
+      <p class="lead">
+        Esta página explica como pedir à <strong>AMSN</strong> a exclusão dos dados pessoais que temos
+        sobre você — obtidos nas conversas e pesquisas pelo WhatsApp com os nossos números oficiais
+        “Pesquisa-AMSN” e “Lideres-AMSN” — conforme a Lei Geral de Proteção de Dados (LGPD, Lei
+        nº 13.709/2018). O pedido é gratuito e não precisa de justificativa.
+      </p>
+
+      <nav class="toc" aria-label="Sumário">
+        <strong>Sumário</strong>
+        <ol>
+          <li><a href="#como-pedir">Como pedir a exclusão</a></li>
+          <li><a href="#depois">O que acontece depois do pedido</a></li>
+          <li><a href="#o-que-e-excluido">O que é excluído</a></li>
+          <li><a href="#o-que-e-mantido">O que é mantido e por quê</a></li>
+          <li><a href="#sair-vs-excluir">Diferença entre SAIR e EXCLUIR</a></li>
+          <li><a href="#contato">Dúvidas e contato</a></li>
+        </ol>
+      </nav>
+
+      <section id="como-pedir">
+        <h2>1. Como pedir a exclusão</h2>
+        <p>Escolha o caminho que for mais fácil para você:</p>
+        <ol class="steps">
+          <li>
+            <strong class="title">Pelo WhatsApp</strong>
+            Na conversa com qualquer um dos nossos números oficiais, responda
+            <span class="kbd big">EXCLUIR</span>. Pronto: o pedido fica registrado junto ao seu número e a
+            equipe confirma o recebimento e conclui a exclusão em até 15 dias.
+          </li>
+          <li>
+            <strong class="title">Por e-mail</strong>
+            Escreva para <a href="mailto:ariel@amsn.online?subject=Exclus%C3%A3o%20de%20dados">ariel@amsn.online</a>
+            com o assunto <strong>“Exclusão de dados”</strong>, informando o <strong>número de telefone</strong>
+            (com DDD) usado nas conversas — é por ele que localizamos os seus dados. Se preferir, envie o
+            e-mail a partir de um endereço que você já use e descreva brevemente o pedido.
+          </li>
+        </ol>
+        <div class="note">
+          Para a sua segurança, podemos pedir uma confirmação de que o pedido partiu do titular do número
+          (por exemplo, uma mensagem enviada do próprio WhatsApp). Não pedimos senhas, documentos ou dados
+          bancários para isso.
+        </div>
+      </section>
+
+      <section id="depois">
+        <h2>2. O que acontece depois do pedido</h2>
+        <ul>
+          <li><strong>Recebimento:</strong> a equipe da AMSN registra o pedido e confirma o recebimento pelo mesmo canal (WhatsApp ou e-mail).</li>
+          <li><strong>Prazo:</strong> a exclusão é concluída em até <strong>15 dias</strong> contados do recebimento, conforme a LGPD. A exclusão <strong>não é automática</strong> — é executada manualmente pela nossa equipe, o que garante que apagamos exatamente o que é seu.</li>
+          <li><strong>Confirmação final:</strong> ao terminar, enviamos uma mensagem ou e-mail confirmando que os seus dados foram excluídos. Depois disso, o seu número não recebe mais nenhuma comunicação nossa.</li>
+          <li><strong>Não encontramos o seu número?</strong> Informaremos isso a você — pode ser que não tenhamos nenhum dado seu ou que o número informado seja diferente do usado na conversa.</li>
+        </ul>
+      </section>
+
+      <section id="o-que-e-excluido">
+        <h2>3. O que é excluído</h2>
+        <p>Ao atender o seu pedido, removemos dos nossos sistemas:</p>
+        <ul>
+          <li>seu nome e demais dados de contato associados ao número (bairro, zona, cidade e outras informações de cadastro);</li>
+          <li>o conteúdo das mensagens trocadas com os nossos números e os respectivos metadados (datas, status de entrega/leitura);</li>
+          <li>as suas respostas às pesquisas, desvinculando-as definitivamente de você;</li>
+          <li>a sua presença em listas de contatos, convites e campanhas da AMSN.</li>
+        </ul>
+      </section>
+
+      <section id="o-que-e-mantido">
+        <h2>4. O que é mantido e por quê</h2>
+        <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>O que fica</th><th>Por quê</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Apenas o seu número de telefone</strong> na lista de bloqueio (opt-out)</td>
+              <td>É a única forma de garantir que você <strong>não seja contatado(a) de novo</strong> por engano — inclusive se o número aparecer em alguma lista futura. Nada além do número é guardado ali.</td>
+            </tr>
+            <tr>
+              <td>Registros exigidos por lei</td>
+              <td>Registros de acesso e de auditoria pelo prazo mínimo previsto na legislação (por exemplo, no Marco Civil da Internet), e o registro de que o seu pedido de exclusão foi atendido, para comprovar o cumprimento da LGPD.</td>
+            </tr>
+            <tr>
+              <td>Resultados agregados e anonimizados de pesquisas</td>
+              <td>Estatísticas que não identificam ninguém (dados anonimizados não são dados pessoais). A sua resposta individual é desvinculada de você.</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        <p>
+          Os dados já transmitidos pela plataforma do WhatsApp são tratados pela Meta de acordo com a
+          política de privacidade do próprio WhatsApp; o histórico guardado no seu aparelho é controlado
+          por você.
+        </p>
+      </section>
+
+      <section id="sair-vs-excluir">
+        <h2>5. Diferença entre SAIR e EXCLUIR</h2>
+        <ul>
+          <li><span class="kbd">SAIR</span> (ou PARAR, PARE, STOP, CANCELAR, REMOVER, DESCADASTRAR, CHEGA): encerra a conversa <strong>na hora</strong> e coloca o seu número na lista de bloqueio permanente — você não recebe mais mensagens. Os dados já registrados permanecem até o fim do prazo de retenção descrito na <a href="https://amsn.online/privacidade/#retencao">Política de Privacidade</a>.</li>
+          <li><span class="kbd">EXCLUIR</span>: além de não receber mais mensagens, os seus dados pessoais são <strong>apagados</strong> em até 15 dias, como descrito acima.</li>
+        </ul>
+        <p>Você pode usar os dois: responder SAIR agora e, se quiser, pedir EXCLUIR a qualquer momento depois.</p>
+      </section>
+
+      <section id="contato">
+        <h2>6. Dúvidas e contato</h2>
+        <p>
+          <strong>AMSN</strong> · Manaus (AM)<br />
+          Privacidade e proteção de dados: <a href="mailto:ariel@amsn.online">ariel@amsn.online</a><br />
+          Site: <a href="https://amsn.online/">amsn.online</a>
+        </p>
+        <p>
+          Se entender que o seu pedido não foi atendido, você pode apresentar reclamação à
+          <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>, em
+          <a href="https://www.gov.br/anpd/" rel="noopener">gov.br/anpd</a>.
+        </p>
+      </section>
+
+      <footer class="legal-footer">
+        <span>© 2026 AMSN</span>
+        <nav aria-label="Documentos legais">
+          <a href="https://amsn.online/privacidade/">Política de Privacidade</a>
+          <a href="https://amsn.online/termos/">Termos de Uso</a>
+          <a href="https://amsn.online/exclusao-de-dados/" aria-current="page">Exclusão de dados</a>
+        </nav>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
